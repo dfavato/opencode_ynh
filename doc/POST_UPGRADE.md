@@ -1,1 +1,1 @@
-This is a dummy disclaimer to display after upgrades
+OpenCode a été mis à jour avec succès.

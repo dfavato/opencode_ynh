@@ -1,1 +1,1 @@
-This is a dummy description of this app features
+AI coding agent with a web interface. OpenCode provides a full AI-assisted coding experience in your browser.

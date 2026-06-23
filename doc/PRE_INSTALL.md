@@ -1,1 +1,6 @@
-This is a dummy disclaimer to display prior to the install
+OpenCode is an AI coding agent that runs as a web application. Before installing:
+
+- OpenCode will be installed as a standalone binary
+- No database is required
+
+Visit https://opencode.ai/docs for more information.

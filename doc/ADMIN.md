@@ -1,3 +1,6 @@
-This is a dummy admin doc for this app
+OpenCode is installed as a standalone binary. The web interface runs behind nginx reverse proxy.
 
-The app install dir is `__INSTALL_DIR__`
+The binary is located at `__INSTALL_DIR__/opencode`.
+Logs are at `/var/log/__APP__/__APP__.log`.
+
+For detailed configuration, see https://opencode.ai/docs

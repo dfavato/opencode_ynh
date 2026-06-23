@@ -1,1 +1,1 @@
-This is a dummy disclaimer to display prior to any upgrade
+The OpenCode application will be upgraded to the latest version. A backup will be created automatically before the upgrade.
