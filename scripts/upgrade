@@ -1,37 +1,18 @@
 #!/bin/bash
 
-source _common.sh
 source /usr/share/yunohost/helpers
 
 ynh_script_progression "Stopping $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="stop"
 
-ynh_script_progression "Ensuring downward compatibility..."
-
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir" --full_replace --keep="data"
-
-chmod +x "$install_dir/opencode"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".local"
 
 chown -R "$app:$app" "$install_dir"
 
-ynh_script_progression "Upgrading system configurations related to $app..."
-
-ynh_config_add_nginx
-
-ynh_config_add_systemd
-
-yunohost service add "$app" --description="OpenCode AI coding agent web interface" --log="/var/log/$app/$app.log"
-
-ynh_config_add_logrotate
-
-ynh_script_progression "Initializing auth.json..."
-
-write_auth_json
-
-ynh_script_progression "Starting $app's systemd service..."
+ynh_script_progression "Re-starting $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="start"
 

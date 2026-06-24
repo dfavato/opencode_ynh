@@ -5,4 +5,3 @@ source /usr/share/yunohost/helpers
 ynh_abort_if_errors
 
 ynh_app_config_run "$1"
-ynh_systemctl --service="$app" --action="restart"
