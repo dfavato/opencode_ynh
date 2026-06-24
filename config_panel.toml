@@ -6,7 +6,10 @@ version = "1.0"
 name.en = "OpenCode configuration"
 services = ["__APP__"]
 
-    [main.opencode]
-    ask.en = "OpenCode Zen API Key"
-    type = "password"
-    bind = "opencode>key:__INSTALL_DIR__/.local/share/opencode/auth.json"
+    [main.providers]
+    name.en = "Providers configuration"
+
+        [main.providers.opencode]
+        ask.en = "OpenCode Zen API Key"
+        type = "password"
+        bind = "opencode>key:__INSTALL_DIR__/.local/share/opencode/auth.json"
