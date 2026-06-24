@@ -6,16 +6,9 @@ source /usr/share/yunohost/helpers
 ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
-
-ls -la "$install_dir"
-
-chmod +x "$install_dir/opencode"
-
-chown -R "$app:$app" "$install_dir"
+ynh_add_config --template="auth.json" --destination="$install_dir/.local/share/opencode/auth.json"
 
 ynh_script_progression "Initializing auth.json..."
-
-write_auth_json
 
 ynh_script_progression "Adding system configurations related to $app..."
 

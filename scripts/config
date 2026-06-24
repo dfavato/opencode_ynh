@@ -4,11 +4,5 @@ source /usr/share/yunohost/helpers
 
 ynh_abort_if_errors
 
-if [ "$1" = "apply" ]; then
-    ynh_app_config_run "$1"
-    source _common.sh
-    write_auth_json
-    ynh_systemctl --service="$app" --action="restart"
-else
-    ynh_app_config_run "$1"
-fi
+ynh_app_config_run "$1"
+ynh_systemctl --service="$app" --action="restart"

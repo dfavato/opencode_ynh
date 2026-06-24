@@ -17,6 +17,7 @@ services = ["__APP__"]
         [main.official.opencode]
         ask.en = "OpenCode Zen API Key"
         type = "password"
+        bind = "opencode>key:__INSTALL_DIR__/.local/share/opencode/auth.json"
 
         [main.official.opencode_go]
         ask.en = "OpenCode Go API Key"
