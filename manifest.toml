@@ -45,10 +45,11 @@ ram.runtime = "200M"
 [resources]
     [resources.sources]
 
-    [resources.sources.main]
-    url = "https://github.com/anomalyco/opencode/releases/download/v1.17.9/opencode-linux-x64.tar.gz"
-    sha256 = "85aeac95258d409d16ca34f1cfcd74c78d9d1a70b0a4154128b588e1405384f9"
-    autoupdate.strategy = "latest_github_tag"
+        [resources.sources.main]
+        url = "https://github.com/anomalyco/opencode/releases/download/v1.17.9/opencode-linux-x64.tar.gz"
+        sha256 = "85aeac95258d409d16ca34f1cfcd74c78d9d1a70b0a4154128b588e1405384f9"
+        autoupdate.strategy = "latest_github_tag"
+        in_subdir = false
 
     [resources.system_user]
 
