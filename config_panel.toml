@@ -6,15 +6,7 @@ version = "1.0"
 name.en = "OpenCode configuration"
 services = ["__APP__"]
 
-    [main.info]
-    ask.en = "API keys are stored in auth.json and picked up by opencode. After saving, the service will restart."
-    type = "alert"
-    style = "info"
-
-    [main.official]
-    name.en = "OpenCode Official"
-
-        [main.official.opencode]
-        ask.en = "OpenCode Zen API Key"
-        type = "password"
-        bind = "opencode>key:__INSTALL_DIR__/.local/share/opencode/auth.json"
+    [main.opencode]
+    ask.en = "OpenCode Zen API Key"
+    type = "password"
+    bind = "opencode>key:__INSTALL_DIR__/.local/share/opencode/auth.json"
