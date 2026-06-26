@@ -3,6 +3,7 @@
 source /usr/share/yunohost/helpers
 
 ynh_script_progression "Removing system configurations related to $app..."
+rm --force "/usr/local/bin/opencode"
 
 ynh_config_remove_logrotate
 
