@@ -1,7 +1,5 @@
-This is a dummy disclaimer to display after the install
+OpenCode is now installed! You can access it at:
 
-The app url is <https://__DOMAIN____PATH__>
+https://__DOMAIN____PATH__
 
-The app install dir is `__INSTALL_DIR__`
-
-The app id is `__ID__`
+Access is protected by YunoHost's SSO authentication.

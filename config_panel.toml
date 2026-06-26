@@ -1,0 +1,22 @@
+#:schema https://github.com/YunoHost/apps/raw/main/schemas/config_panel.v1.schema.json
+
+version = "1.0"
+
+[main]
+name.en = "OpenCode configuration"
+services = ["__APP__"]
+
+    [main.main]
+    name.en = "App configuration"
+        [main.main.config]
+        ask.en = "[opencode.jsonc](https://opencode.ai/docs/config/#format] config file"
+        type = "file"
+        bind = "__DATA_DIR__/.config/opencode/opencode.jsonc"
+
+    [main.providers]
+    name.en = "Providers configuration"
+
+        [main.providers.opencode]
+        ask.en = "OpenCode Zen API Key"
+        type = "password"
+        bind = "opencode>key:__INSTALL_DIR__/.local/share/opencode/auth.json"
