@@ -10,12 +10,12 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir" --full_replace
 
-mkdir -p "$install_dir/.local/share/"
 mv --force "$install_dir/opencode" "/usr/local/bin/opencode"
-ln --symbolic --force "/usr/local/bin/opencode" "$install_dir/opencode"
-ln --symbolic --force "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
-
-chown -R "$app:$app" "$install_dir"
+chown root:root /usr/local/bin/opencode
+chmod o+x /usr/local/bin/opencode
+ynh_exec_as_app mkdir -p "$install_dir/.local/share/"
+ynh_exec_as_app ln --symbolic --force "/usr/local/bin/opencode" "$install_dir/opencode"
+ynh_exec_as_app ln --symbolic --force "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
 
 ynh_script_progression "Re-starting $app's systemd service..."
 
