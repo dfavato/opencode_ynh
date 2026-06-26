@@ -36,9 +36,9 @@ Please send your pull request to the [testing branch](https://github.com/dfavato
 To try the testing branch, please proceed like that.
 
 ``` bash
-sudo yunohost app install https://github.com/YunoHost-Apps/opencode_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/dfavato/opencode_ynh/tree/testing --debug
 or
-sudo yunohost app upgrade opencode -u https://github.com/YunoHost-Apps/opencode_ynh/tree/testing --debug
+sudo yunohost app upgrade opencode -u https://github.com/dfavato/opencode_ynh/tree/testing --debug
 ```
 
 **More info regarding app packaging:** <https://doc.yunohost.org/dev/packaging/>
