@@ -6,7 +6,8 @@ After=network.target
 Type=simple
 User=__APP__
 Group=__APP__
-WorkingDirectory=__INSTALL_DIR__
+WorkingDirectory=__DATA_DIR__/workspace
+Environment=OPENCODE_CONFIG_DIR=__DATA_DIR__/.config/opencode
 ExecStart=__INSTALL_DIR__/opencode web --port __PORT__ --hostname 127.0.0.1
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
