@@ -8,7 +8,7 @@ ynh_script_progression "Setting up source files..."
 ynh_setup_source --dest_dir="$install_dir"
 
 mkdir -p "$install_dir/.local/share/"
-mkdir -p "data_dir/.local/share/opencode/"
+mkdir -p "$data_dir/.local/share/opencode/"
 ln -sf "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
 
 ynh_config_add --template="auth.json" --destination="$data_dir/.local/share/opencode/auth.json"
