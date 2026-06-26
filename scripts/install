@@ -11,7 +11,8 @@ mkdir -p "$install_dir/.local/share/"
 mkdir -p "$data_dir/.local/share/opencode/"
 mkdir -p "$data_dir/workspace"
 mkdir -p "$data_dir/.config/opencode"
-ln -sf "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
+ln --symbolic --force "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
+ln --symbolic --force "$install_dir/opencode" /usr/local/bin/opencode
 
 ynh_config_add --template="auth.json" --destination="$data_dir/.local/share/opencode/auth.json"
 

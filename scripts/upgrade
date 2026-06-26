@@ -11,7 +11,8 @@ ynh_script_progression "Upgrading source files..."
 ynh_setup_source --dest_dir="$install_dir" --full_replace
 
 mkdir -p "$install_dir/.local/share/"
-ln -sf "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
+ln --symbolic --force "$data_dir/.local/share/opencode" "$install_dir/.local/share/opencode"
+ln --symbolic --force "$install_dir/opencode" "/usr/local/bin/opencode"
 
 chown -R "$app:$app" "$install_dir"
 
