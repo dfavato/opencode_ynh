@@ -6,6 +6,13 @@ version = "1.0"
 name.en = "OpenCode configuration"
 services = ["__APP__"]
 
+    [main.main]
+    name.en = "App configuration"
+        [main.main.config]
+        ask.en = "[opencode.jsonc](https://opencode.ai/docs/config/#format] config file"
+        type = "file"
+        bind = "__DATA_DIR__/.config/opencode/opencode.jsonc"
+
     [main.providers]
     name.en = "Providers configuration"
 
