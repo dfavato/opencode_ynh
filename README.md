@@ -20,6 +20,8 @@ OpenCode is an open source AI coding agent that provides a powerful AI-assisted 
 * The web interface is protected by YunoHost's SSO/ldap authentication
 * No database is required to run this application
 * For now only opencode zen api-key can be configured in the configuration panel
+* The opencode.jsonc config file can be added in the configuration panel, bot other files (skills, agents, etc.) cannot.
+* You can edit you Opencode skills and agents using opencode web interface.
 
 ## Documentation and resources
 
